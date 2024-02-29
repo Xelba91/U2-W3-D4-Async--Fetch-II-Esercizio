@@ -15,7 +15,7 @@ const renderCards = function (photos) {
       <div class="col-md-4">
           <div class="card mb-4 h-100  shadow-sm">
           <a href="./details.html?photoId=${photo.id}">
-              <img class= "card-img-top" src=${photo.src.small}} style="width: 100%" />
+              <img class= "card-img-top" src=${photo.src.small}}  />
           </a>
               <div class="card-body">
               <a href="./details.html?photoId=${photo.id}">
@@ -94,4 +94,11 @@ let customInputField = document.querySelector(".input-group .form-control");
 let customSearchButton = document.querySelector(".input-group .btn-outline-secondary");
 customSearchButton.addEventListener("click", () => {
   getImages(customInputField.value);
+});
+// window.onload = function () {
+//   getImages("nvidia");
+// };
+
+document.addEventListener("DOMContentLoaded", function () {
+  getImages("nvidia");
 });
